@@ -47,12 +47,3 @@ CU_Assistant/
 └── requirements.txt
 
 MIT License © 2025 Purusattam Mandal
-
----
-
-### 🧠 6. Double-Check Before Pushing  
-
-Run this safety check:  
-
-```bash
-find . -type f -name "*.py" -exec grep -H "GEMINI_KEY" {} \;

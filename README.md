@@ -1,51 +1,58 @@
-🧠 About CU_Assistant
+# 🎓 CU AI Assistant  
 
-CU_Assistant (Chandigarh University Assistant) is a locally deployable AI-powered learning companion that helps students instantly find answers from their course materials.
+An intelligent academic assistant built for **Chandigarh University** students.  
+It uses **Retrieval-Augmented Generation (RAG)** with **Gemini 2.5 Flash**  
+to answer queries from PDFs, timetables, and study materials.  
 
-The system uses Retrieval-Augmented Generation (RAG) — combining semantic search (using FAISS & Sentence Transformers) with local text generation (GPT-2/Ollama).
+---
 
-Students can upload academic PDFs (like Python, Design and Analysis of Algorithms, AI Tools, and PL/SQL labs), and the assistant retrieves and explains answers with supporting citations — all in a chat-style Tkinter interface.
+## 🚀 Features  
+- 🧠 AI Answers from CU course PDFs & timetables  
+- 💬 Chat memory saved locally  
+- ⚙️ Re-index PDFs anytime  
+- 🎨 Modern Tkinter UI  
+- 🔍 FAISS vector search + Sentence Transformer embeddings  
 
-✨ Features
+---
 
-📚 Upload & index multiple academic PDFs
+## 🧩 Tech Stack  
+- **Python 3.12+**  
+- **CustomTkinter** (UI)  
+- **Sentence-Transformers** (`all-MiniLM-L6-v2`)  
+- **Google Generative AI (Gemini 2.5 Flash)**  
+- **FAISS** / Pickle for vector DB  
 
-🔍 Retrieve answers contextually using semantic similarity
+---
 
-⚙️ Uses DAA & AI algorithms like BFS, DFS, A*, Quick Sort, and 0/1 Knapsack for retrieval ranking
+## 🛠️ Setup  
 
-💬 Tkinter-based Chat UI with real-time responses
+```bash
+git clone https://github.com/<your-username>/CU_Assistant.git
+cd CU_Assistant
+pip install -r requirements.txt
 
-🗃️ SQLite database for chat history and analytics
+Create .env from .env.example and add your Gemini API key.
 
-📊 Matplotlib dashboard for visualizing query trends
+Run the app:
 
-🧩 Fully offline & extendable (Flask, WhatsApp Bot, or CU website integration)
+python main.py
 
-🧰 Tech Stack
-Category	Tools / Libraries
-Language	Python 3
-GUI	Tkinter
-Embeddings	Sentence Transformers
-Vector Store	FAISS / Chroma
-Text Generation	GPT-2 (Transformers)
-Database	SQLite
-Visualization	Matplotlib
-Algorithms	BFS, DFS, A*, Quick Sort, 0/1 Knapsack
-🚀 Project Goals
+CU_Assistant/
+├── data/               # PDFs, embeddings, chat DB
+├── modules/            # AI, retriever, embedder, etc.
+├── ui/                 # CustomTkinter UI
+├── scripts/            # Indexing scripts
+├── assets/             # Logo, icons
+├── main.py             # App entry point
+└── requirements.txt
 
-To create a personalized academic assistant aligned with CU’s MCA AI/ML curriculum
+MIT License © 2025 Purusattam Mandal
 
-To integrate key lab concepts from Python, DAA, AI Tools, and PL/SQL
+---
 
-To later scale into a web app or WhatsApp chatbot using local or cloud-hosted RAG systems
+### 🧠 6. Double-Check Before Pushing  
 
-🧑‍💻 Future Enhancements
+Run this safety check:  
 
-🗣️ Add speech-to-text and voice output
-
-🌐 Create Flask API + deploy on CU internal server
-
-🤖 Integrate with WhatsApp via Twilio
-
-🧮 Add subject-wise performance analytics
+```bash
+find . -type f -name "*.py" -exec grep -H "GEMINI_KEY" {} \;

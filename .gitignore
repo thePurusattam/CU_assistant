@@ -1,0 +1,22 @@
+# --- Environment & secrets ---
+.env
+*.key
+
+# --- Local data / embeddings ---
+data/embeddings/
+data/chat_history.db
+
+# --- Cache / build ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# --- VSCode / IDE settings ---
+.vscode/
+.idea/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db

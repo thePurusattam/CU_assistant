@@ -1,0 +1,10 @@
+sentence-transformers
+faiss-cpu
+chromadb
+PyPDF2
+Pillow
+pytesseract
+google-generativeai
+python-dotenv
+matplotlib
+pyperclip
